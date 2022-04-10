@@ -1,18 +1,17 @@
 /// PracticeRust
 /// @author bradlet
-
 /// A project that I will use to keep track of my practice programs as I acquaint myself with Rust.
 mod models;
+mod helpers;
 
-use models::types;
-use crate::types::Program;
+use crate::models::types::Program;
 
 fn main() {
     print!("Welcome to program selection!\nYour choices... ");
     for program in Program::programs() {
         print!("{:?}, ", program)
     }
-    println!("\n----------------------------------");
+    println!(); helpers::horizontal_sep();
 
     let args: Vec<String> = std::env::args().collect();
     if args.len() != 2 { panic!("Invalid arguments provided") }

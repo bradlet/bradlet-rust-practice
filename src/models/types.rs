@@ -1,6 +1,8 @@
 /// types.rs
 /// @author bradlet
 
+use crate::helpers;
+
 #[derive(Debug)]
 pub enum Program {
     DEFAULT,
@@ -21,20 +23,27 @@ impl Program {
     }
 
     pub fn run(name: String, args: Vec<String>) -> () {
-        println!("Running program (or default): {}\n", name);
+        println!("Running program (default to main): {}", name);
+        helpers::horizontal_sep();
+
         let used = match Program::from(&name) {
             // In default case
             Program::DEFAULT => Program::main( args),
             Program::MAIN => Program::main(args),
         };
+
+        helpers::horizontal_sep();
         println!("Completed call to {} with args: {}", name, used.join(", ").as_str())
     }
 
 
     pub fn main(args: Vec<String>) -> Vec<String> {
+        println!("Welcome to Main! Running...");
+
         for arg in args.iter() {
-            println!("arg: {}\n", arg)
+            println!("arg: {}", arg)
         }
+
         args
     }
 }
