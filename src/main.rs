@@ -16,8 +16,6 @@ fn main() {
     let args: Vec<String> = std::env::args().collect();
     if args.len() != 2 { panic!("Invalid arguments provided") }
 
-    // Note to self: args.nth(n) is destructive and drops all parsed elements in the iterator
-    //  Also: 0th element is the name of this program.
     let input = args.get(1).expect("No CLI input provided.");
 
     Program::run(String::from(input), args)
