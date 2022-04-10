@@ -1,6 +1,7 @@
 /// types.rs
 /// @author bradlet
 
+#[derive(Debug)]
 pub enum Program {
     DEFAULT,
     MAIN,
@@ -8,10 +9,7 @@ pub enum Program {
 
 impl Program {
     pub fn programs() -> Vec<Program> {
-        Vec(
-            Program::DEFAULT,
-            Program::MAIN
-        )
+        vec![Program::DEFAULT, Program::MAIN]
     }
 
     pub fn from(name: &str) -> Program {
@@ -23,7 +21,7 @@ impl Program {
     }
 
     pub fn run(name: String, args: Vec<String>) -> () {
-        println!("Running program: {}", name);
+        println!("Running program (or default): {}\n", name);
         let used = match Program::from(&name) {
             // In default case
             Program::DEFAULT => Program::main( args),
