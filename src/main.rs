@@ -14,9 +14,8 @@ fn main() {
     println!(); helpers::horizontal_sep();
 
     let args: Vec<String> = std::env::args().collect();
-    if args.len() != 2 { panic!("Invalid arguments provided") }
 
-    let input = args.get(1).expect("No CLI input provided.");
+    let programSelection = args.get(1).expect("No CLI input provided.");
 
-    Program::run(String::from(input), args)
+    Program::run(String::from(programSelection), args)
 }

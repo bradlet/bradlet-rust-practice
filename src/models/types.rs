@@ -43,9 +43,12 @@ impl Program {
         let returned_ownership = Program::take_val(test_ownership);
         println!("string is not gone? {}", returned_ownership);
 
-        for arg in args.iter() {
-            println!("arg: {}", arg)
-        }
+        let option: Option<&String> = args.get(2);
+
+        match option {
+            Some(str) => println!("You sneaky B, you included {}?!?!", str),
+            None => println!("Everything's running fine, nothing else to see here."),
+        };
 
         args
     }
