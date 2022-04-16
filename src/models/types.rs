@@ -72,6 +72,11 @@ impl Program {
             )
             .collect();
 
+        if int_args.is_empty() {
+            println!("No input integers provided!");
+            return args
+        }
+
         // Median:
         int_args.sort();
         println!("The median of this list is {}", int_args[int_args.len() / 2]);
@@ -92,7 +97,7 @@ impl Program {
             }
         }
 
-        println!("The mode of this list occurs {} times and is {}.", max_count, max_index);
+        println!("The mode of this list is {} and occurs {} times.", max_index, max_count);
 
         args
     }
