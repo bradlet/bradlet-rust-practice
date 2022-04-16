@@ -15,7 +15,7 @@ fn main() {
 
     let args: Vec<String> = std::env::args().collect();
 
-    let programSelection = args.get(1).expect("No CLI input provided.");
+    let program_selection = args.get(1).expect("No CLI input provided.");
 
-    Program::run(String::from(programSelection), args)
+    Program::run(String::from(program_selection), args)
 }
