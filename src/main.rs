@@ -2,9 +2,10 @@
 /// @author bradlet
 /// A project that I will use to keep track of my practice programs as I acquaint myself with Rust.
 mod models;
+mod programs;
 mod helpers;
 
-use crate::models::types::Program;
+use crate::programs::Program;
 
 fn main() {
     print!("Welcome to program selection!\nYour choices... ");

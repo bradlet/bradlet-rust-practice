@@ -1,8 +1,9 @@
-use std::collections::HashMap;
-/// types.rs
+/// programs.rs
 /// @author bradlet
-
 use crate::helpers;
+use std::collections::HashMap;
+
+mod program_main;
 
 #[derive(Debug)]
 pub enum Program {
@@ -34,33 +35,12 @@ impl Program {
         let used = match Program::from(&name) {
             // In default case
             Program::Default => Program::main( args),
-            Program::Main => Program::main(args),
+            Program::Main => program_main::main(args),
             Program::MedMode => Program::median_mode_from_args(args),
         };
 
         helpers::horizontal_sep();
         println!("Completed call to {} with args: {}", name, used.join(", ").as_str())
-    }
-
-
-    fn main(args: Vec<String>) -> Vec<String> {
-        println!("Welcome to Main! Running...");
-        fn take_val(str: String) -> String {
-            println!("I stole this string: {}", str);
-            str
-        }
-        let test_ownership = String::from("test");
-        let returned_ownership = take_val(test_ownership);
-        println!("string is not gone? {}", returned_ownership);
-
-        let option: Option<&String> = args.get(2);
-
-        match option {
-            Some(str) => println!("You sneaky B, you included {}?!?!", str),
-            None => println!("Everything's running fine, nothing else to see here."),
-        };
-
-        args
     }
 
     fn median_mode_from_args(args: Vec<String>) -> Vec<String> {
