@@ -1,8 +1,8 @@
 use std::fmt;
 
-struct DisplayableThing {
-    first_value: String,
-    second_value: String,
+pub struct DisplayableThing {
+    pub first_value: String,
+    pub second_value: String,
 }
 
 impl fmt::Display for DisplayableThing {
