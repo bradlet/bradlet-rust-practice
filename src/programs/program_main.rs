@@ -1,4 +1,4 @@
-/// programs_main.rs
+/// program_main.rs
 /// @author bradlet
 
 pub fn main(args: Vec<String>) -> Vec<String> {
