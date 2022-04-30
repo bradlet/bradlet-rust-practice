@@ -1,7 +1,6 @@
 /// programs.rs
 /// @author bradlet
 use crate::helpers;
-use std::collections::HashMap;
 
 mod program_main;
 mod program_med_mode;
