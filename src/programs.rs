@@ -61,4 +61,10 @@ mod tests {
         // Unexpected values get default
         assert_eq!(Program::Default, Program::from("SomethingElse"));
     }
+
+    #[test]
+    #[should_panic]
+    fn test_out_should_panic() {
+        panic!("Oh no!");
+    }
 }
