@@ -69,6 +69,7 @@ mod tests {
 
     #[test]
     #[should_panic]
+    #[ignore] // Now this will only run if it is specifically targeted with `cargo test __target__`
     fn test_out_should_panic() {
         panic!("Oh no!");
     }
