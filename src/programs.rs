@@ -51,6 +51,11 @@ impl Program {
 #[cfg(test)]
 mod tests {
     use crate::Program;
+    /*
+    Could also do:
+    > use super::*;
+    That would import all modules in the same file basically.
+     */
 
     #[test]
     fn returns_expected_program() {
