@@ -1,13 +1,12 @@
 /// programs.rs
 /// @author bradlet
 use crate::helpers;
-use std::collections::HashMap;
 
 mod program_main;
 mod program_med_mode;
 mod program_displayable;
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq)]
 pub enum Program {
     Default,
     Main,
@@ -46,5 +45,18 @@ impl Program {
 
         helpers::horizontal_sep();
         println!("Completed call to {} with args: {}", name, used.join(", ").as_str())
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use crate::Program;
+
+    #[test]
+    fn returns_expected_program() {
+        assert_eq!(Program::Default, Program::from("default"));
+        assert_eq!(Program::Main, Program::from("main"));
+        assert_eq!(Program::MedMode, Program::from("mm"));
+        assert_eq!(Program::Displayable, Program::from("display"));
     }
 }
