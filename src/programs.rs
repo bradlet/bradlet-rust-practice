@@ -58,5 +58,7 @@ mod tests {
         assert_eq!(Program::Main, Program::from("main"));
         assert_eq!(Program::MedMode, Program::from("mm"));
         assert_eq!(Program::Displayable, Program::from("display"));
+        // Unexpected values get default
+        assert_eq!(Program::Default, Program::from("SomethingElse"));
     }
 }
