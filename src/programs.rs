@@ -39,7 +39,7 @@ impl Program {
 
     pub fn run(name: String, args: Vec<String>) -> () {
         println!("Running program (default to main): {}", name);
-        horizontal_sep(20, Some(Color::BrightGreen));
+        horizontal_sep(40, Some(Color::BrightGreen));
 
         let used = match Program::from(&name) {
             // In default case
@@ -49,7 +49,7 @@ impl Program {
             Program::Displayable => program_displayable::main(args),
         };
 
-        horizontal_sep(20, Some(Color::BrightGreen));
+        horizontal_sep(40, Some(Color::BrightGreen));
         println!(
             "Completed call to {} with args: {}",
             name,

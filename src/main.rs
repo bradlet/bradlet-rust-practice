@@ -13,7 +13,7 @@ fn main() {
     for program in Program::programs() {
         print!("{:?}, ", program)
     }
-    horizontal_sep(20, Some(Color::BrightGreen));
+    println!(); horizontal_sep(40, Some(Color::BrightGreen));
 
     let args: Vec<String> = std::env::args().collect();
 
