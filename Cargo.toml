@@ -6,3 +6,5 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+bradleys-random-rust-helpers = { git = "https://github.com/bradlet/bradleys-random-rust-helpers" }
+text-colorizer = "1"
