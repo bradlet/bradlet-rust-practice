@@ -37,7 +37,7 @@ impl Program {
         }
     }
 
-    pub fn run(name: String, args: Vec<String>) -> () {
+    pub fn run(name: String, args: Vec<String>) {
         println!("Running program (default to main): {}", name);
         horizontal_sep(40, Some(Color::BrightGreen));
 
