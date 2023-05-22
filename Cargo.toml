@@ -5,6 +5,7 @@ edition = "2021"
 
 [dependencies]
 bradleys-random-rust-helpers = { git = "https://github.com/bradlet/bradleys-random-rust-helpers" }
+postgres-flatten = { git = "https://gitlab.cecs.pdx.edu/bradlet2/postgres-flatten.git", branch = "main"}
 postgres = "0.19.5"
 postgres-types = "0.2.5"
 text-colorizer = "1"

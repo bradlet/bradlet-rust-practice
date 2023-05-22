@@ -355,6 +355,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "postgres-flatten"
+version = "0.1.0"
+source = "git+https://gitlab.cecs.pdx.edu/bradlet2/postgres-flatten.git?branch=main#54e0a55365ca2cebf145c4a74f6fb780824216f6"
+dependencies = [
+ "postgres",
+ "quote",
+ "syn",
+]
+
+[[package]]
 name = "postgres-protocol"
 version = "0.6.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -395,6 +405,7 @@ version = "0.1.0"
 dependencies = [
  "bradleys-random-rust-helpers",
  "postgres",
+ "postgres-flatten",
  "postgres-types",
  "text-colorizer",
 ]
