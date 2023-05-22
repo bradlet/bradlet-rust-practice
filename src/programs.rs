@@ -1,11 +1,12 @@
+/// programs.rs
+/// @author bradlet
 use bradleys_random_rust_helpers::horizontal_sep;
 use text_colorizer::Color;
 
 mod program_displayable;
-/// programs.rs
-/// @author bradlet
 mod program_main;
 mod program_med_mode;
+mod program_my_macro;
 
 #[derive(Debug, PartialEq)]
 pub enum Program {
@@ -13,17 +14,19 @@ pub enum Program {
     Main,
     MedMode,
     Displayable,
+    MyMacro,
 }
 
 impl Program {
     // Rust doesn't seem to have something like ".values()" on enums by default or as part of
     // the standard library, so just making this to have access to a list of variants.
-    pub fn programs() -> [Program; 4] {
+    pub fn programs() -> [Program; 5] {
         [
             Program::Default,
             Program::Main,
             Program::MedMode,
             Program::Displayable,
+            Program::MyMacro,
         ]
     }
 
@@ -33,6 +36,7 @@ impl Program {
             "main" => Program::Main,
             "mm" => Program::MedMode,
             "display" => Program::Displayable,
+            "macro" => Program::MyMacro,
             _ => Program::Default,
         }
     }
@@ -47,6 +51,7 @@ impl Program {
             Program::Main => program_main::main(args),
             Program::MedMode => program_med_mode::main(args),
             Program::Displayable => program_displayable::main(args),
+            Program::MyMacro => program_my_macro::main(args),
         };
 
         horizontal_sep(40, Some(Color::BrightGreen));
@@ -73,6 +78,7 @@ mod tests {
         assert_eq!(Program::Main, Program::from("main"));
         assert_eq!(Program::MedMode, Program::from("mm"));
         assert_eq!(Program::Displayable, Program::from("display"));
+        assert_eq!(Program::MyMacro, Program::from("macro"));
         // Unexpected values get default
         assert_eq!(Program::Default, Program::from("SomethingElse"));
     }

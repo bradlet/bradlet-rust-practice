@@ -1,7 +1,7 @@
-use postgres::{Client, NoTls};
 /// program_main.rs
 /// @author bradlet
 use text_colorizer::Colorize;
+use postgres::{Client, NoTls};
 
 pub fn main(args: Vec<String>) -> Vec<String> {
     let welcome = "Welcome to Main! Let's see what's in the DB...".bright_cyan();
