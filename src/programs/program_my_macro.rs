@@ -1,9 +1,9 @@
 //! program_my_macro.rs
 //! @author bradlet
 
-
 use postgres_flatten::{flattened::ToFlattenedSql, ToFlattenedSql};
 use text_colorizer::{Color, Colorize};
+
 #[allow(dead_code)]
 #[derive(ToFlattenedSql)]
 struct Cat {
