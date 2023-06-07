@@ -1,9 +1,10 @@
 //! program_my_macro.rs
 //! @author bradlet
 
+
 use postgres_flatten::{flattened::ToFlattenedSql, ToFlattenedSql};
 use text_colorizer::{Color, Colorize};
-
+#[allow(dead_code)]
 #[derive(ToFlattenedSql)]
 struct Cat {
     name: String,
@@ -13,12 +14,6 @@ struct Cat {
 
 pub fn main(args: Vec<String>) -> Vec<String> {
     println!("{}", "Welcome to My Macro Demo!".bright_cyan());
-
-    let test = Cat {
-        name: String::from("Rudy"),
-        age: 2,
-        color: Color::White
-    };
 
     Cat::into_flattened_row();
 
