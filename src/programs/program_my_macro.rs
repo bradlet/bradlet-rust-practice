@@ -2,7 +2,9 @@
 //! @author bradlet
 
 use postgres::{Client, NoTls};
-use postgres_flatten::{flattened::ToFlattenedSql, ToFlattenedSql};
+use postgres_flatten::{
+    flattened::FromFlattenedSql, flattened::ToFlattenedSql, FromFlattenedSql, ToFlattenedSql,
+};
 use text_colorizer::{Color, Colorize};
 
 #[allow(dead_code)]
@@ -12,9 +14,12 @@ struct Health {
 }
 
 #[allow(dead_code)]
-#[derive(ToFlattenedSql)]
+#[derive(Debug, ToFlattenedSql, FromFlattenedSql)]
 struct Cat {
     name: String,
+    age: i32,
+    color: i32,
+    friendliness: i32,
     // color: Color,
     // health_data: Health,
 }
@@ -37,8 +42,11 @@ pub fn main(args: Vec<String>) -> Vec<String> {
 
     Cat::into_flattened_row();
 
-    let test = Cat::default();
-    println!("{}", test.name);
+    for row in client.query("SELECT * FROM cats;", &[]).unwrap() {
+        let cat = Cat::from_flattened_row(row);
+        let msg = format!("{:?}", cat).bold().green();
+        println!("{}", msg);
+    }
 
     args
 }
