@@ -15,8 +15,8 @@ struct Health {
 #[derive(ToFlattenedSql)]
 struct Cat {
     name: String,
-    color: Color,
-    health_data: Health,
+    // color: Color,
+    // health_data: Health,
 }
 
 pub fn main(args: Vec<String>) -> Vec<String> {
@@ -36,6 +36,9 @@ pub fn main(args: Vec<String>) -> Vec<String> {
     }
 
     Cat::into_flattened_row();
+
+    let test = Cat::default();
+    println!("{}", test.name);
 
     args
 }

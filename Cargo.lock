@@ -353,7 +353,7 @@ dependencies = [
 [[package]]
 name = "postgres-flatten"
 version = "0.1.0"
-source = "git+https://gitlab.cecs.pdx.edu/bradlet2/postgres-flatten.git?branch=main#89c63f8cb65b0e9ce246fa69bf5b0036a5a9771a"
+source = "git+https://gitlab.cecs.pdx.edu/bradlet2/postgres-flatten.git?branch=main#812ee6182a90fe733258861624c11c08541ff465"
 dependencies = [
  "postgres-flatten-impl",
 ]
@@ -361,7 +361,7 @@ dependencies = [
 [[package]]
 name = "postgres-flatten-impl"
 version = "0.1.0"
-source = "git+https://gitlab.cecs.pdx.edu/bradlet2/postgres-flatten.git?branch=main#89c63f8cb65b0e9ce246fa69bf5b0036a5a9771a"
+source = "git+https://gitlab.cecs.pdx.edu/bradlet2/postgres-flatten.git?branch=main#812ee6182a90fe733258861624c11c08541ff465"
 dependencies = [
  "postgres",
  "proc-macro2",
