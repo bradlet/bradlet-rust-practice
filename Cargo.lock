@@ -241,9 +241,9 @@ dependencies = [
 
 [[package]]
 name = "log"
-version = "0.4.18"
+version = "0.4.19"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "518ef76f2f87365916b142844c16d8fefd85039bc5699050210a7778ee1cd1de"
+checksum = "b06a4cde4c0f271a446782e3eff8de789548ce57dbc8eca9292c27f4a42004b4"
 
 [[package]]
 name = "md-5"
@@ -353,7 +353,7 @@ dependencies = [
 [[package]]
 name = "postgres-flatten"
 version = "0.1.0"
-source = "git+https://gitlab.cecs.pdx.edu/bradlet2/postgres-flatten.git?branch=main#d1c497e90d360b83d0c96dd5581ae8ea88319c98"
+source = "git+https://gitlab.cecs.pdx.edu/bradlet2/postgres-flatten.git?branch=main#89c63f8cb65b0e9ce246fa69bf5b0036a5a9771a"
 dependencies = [
  "postgres-flatten-impl",
 ]
@@ -361,7 +361,7 @@ dependencies = [
 [[package]]
 name = "postgres-flatten-impl"
 version = "0.1.0"
-source = "git+https://gitlab.cecs.pdx.edu/bradlet2/postgres-flatten.git?branch=main#d1c497e90d360b83d0c96dd5581ae8ea88319c98"
+source = "git+https://gitlab.cecs.pdx.edu/bradlet2/postgres-flatten.git?branch=main#89c63f8cb65b0e9ce246fa69bf5b0036a5a9771a"
 dependencies = [
  "postgres",
  "proc-macro2",
@@ -417,9 +417,9 @@ dependencies = [
 
 [[package]]
 name = "proc-macro2"
-version = "1.0.59"
+version = "1.0.60"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6aeca18b86b413c660b781aa319e4e2648a3e6f9eadc9b47e9038e6fe9f3451b"
+checksum = "dec2b086b7a862cf4de201096214fa870344cf922b2b30c167badb3af3195406"
 dependencies = [
  "unicode-ident",
 ]
