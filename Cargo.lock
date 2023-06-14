@@ -368,7 +368,7 @@ dependencies = [
 [[package]]
 name = "postgres-flatten"
 version = "0.1.0"
-source = "git+https://gitlab.cecs.pdx.edu/bradlet2/postgres-flatten.git?branch=main#af760e7bc3ed0325d30e87a637fef8e68f876771"
+source = "git+https://gitlab.cecs.pdx.edu/bradlet2/postgres-flatten.git?branch=main#d0f86b55f5f56ef463769a7feca3fc6bdf8d1fa9"
 dependencies = [
  "postgres",
  "postgres-flatten-impl",
@@ -378,7 +378,7 @@ dependencies = [
 [[package]]
 name = "postgres-flatten-impl"
 version = "0.1.0"
-source = "git+https://gitlab.cecs.pdx.edu/bradlet2/postgres-flatten.git?branch=main#af760e7bc3ed0325d30e87a637fef8e68f876771"
+source = "git+https://gitlab.cecs.pdx.edu/bradlet2/postgres-flatten.git?branch=main#d0f86b55f5f56ef463769a7feca3fc6bdf8d1fa9"
 dependencies = [
  "itertools",
  "postgres",

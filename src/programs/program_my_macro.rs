@@ -43,7 +43,7 @@ pub fn main(args: Vec<String>) -> Vec<String> {
     Cat::into_flattened_row();
 
     for row in client.query("SELECT * FROM cats;", &[]).unwrap() {
-        let cat = Cat::from_flattened_row(row);
+        let cat = Cat::from_flattened_row(&row);
         let msg = format!("{:?}", cat).bold().green();
         println!("{}", msg);
     }
